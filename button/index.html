@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            background: #0079b1;
+            width: 160px;
+            height: 50px;
+            overflow: hidden;
+            text-align: center;
+            transition: .2s;
+            cursor: pointer;
+            border-radius: 3px;
+       
+        }
+
+        .btnTwo {
+            position: relative;
+            width: 200px;
+            height: 120px;
+            margin-top: -100px;
+            padding-top: 2px;
+            background: #db6bcc;
+            left: -250px;
+            transition: .3s;
+        }
+
+        .btnText {
+            color: white;
+            transition: .3s;
+            font-size: 14px;
+        }
+
+        .btnText2 {
+            margin-top: 63px;
+            margin-right: -130px;
+            color: #FFF;
+        }
+
+        .button:hover .btnTwo {
+            /*When hovering over .button change .btnTwo*/
+            left: -30px;
+        }
+
+        .button:hover .btnText {
+            /*When hovering over .button change .btnText*/
+            margin-left: 65px;
+        }
+
+        .button:active {
+            /*Clicked and held*/
+            box-shadow: 0px 5px 6px rgba(37, 6, 177, 0.897);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button">
+        <p class="btnText">READY?</p>
+        <div class="btnTwo">
+            <p class="btnText2">&#187;&#187;&#187;&#187;</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
