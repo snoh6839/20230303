@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,50 +7,31 @@
     <title>foam tag</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap');
-
-        * {
-            font-family: 'Sunflower', sans-serif;
-            font-size: 18px;
-            color: aliceblue;
-        }
-
-        body {
-            background-color: #333;
-        }
-
-        input {
-            color: #333;
-        }
-
-        input:focus {
-            border: 1px solid aqua;
-            outline: none;
-        }
-
-        th {
-            padding-right: 15px;
-        }
-
+        * {font-family: 'Sunflower', sans-serif; font-size: 18px; color: aliceblue;}
+        body {background-color: #333;}
+        input {color: #333;}
+        input:focus {border: 1px solid aqua; outline: none;}
+        th { padding-right: 15px;}
         .btn {
-            border: none;
-            display: block;
-            text-align: center;
-            cursor: pointer;
-            text-transform: uppercase;
-            outline: none;
-            overflow: hidden;
-            position: relative;
-            color: #fff;
-            font-weight: 700;
-            font-size: 15px;
-            background-color: #78c7d2;
-            padding: 13px 56px;
-            margin: 15px auto;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
-        }
+                border: none;
+                display: block;
+                text-align: center;
+                cursor: pointer;
+                text-transform: uppercase;
+                outline: none;
+                overflow: hidden;
+                position: relative;
+                color: #fff;
+                font-weight: 700;
+                font-size: 15px;
+                background-color: #78c7d2;
+                padding: 13px 56px;
+                margin: 15px auto;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+            }
 
         .btn span {
-            position: relative;
+            position: relative; 
             z-index: 1;
         }
 
@@ -73,35 +53,19 @@
             -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
             transform: translateX(-9%) translateY(-25%) rotate(45deg);
         }
-
         form {
             margin-bottom: 30px;
         }
-
-        fieldset {
-            border: 3px solid #f0c2ed;
-        }
-
-        legend {
-            font-size: 26px;
-        }
-
+        fieldset {border: 3px solid #f0c2ed;}
+        legend {font-size: 26px;}
         .reWrite {
-            font-size: 10px;
-            color: #fefefe;
-            margin-left: calc(50% - 20px);
-            padding-top: 10px;
-            border: none;
-            border-bottom: 1px solid skyblue;
-            background: transparent;
+            font-size: 10px; color: #fefefe; margin-left: calc(50% - 20px); padding-top: 10px; border: none; border-bottom: 1px solid skyblue; background: transparent;
         }
-
         .reWrite:hover {
             color: aqua;
         }
     </style>
 </head>
-
 <body>
     <form>
         <fieldset>
@@ -109,13 +73,11 @@
             <table>
                 <tr>
                     <th align="left"><label for="id">ID</label></th>
-                    <td><input autofocus maxlength="5" required placeholder="영문만 사용해 주세요" type="text" name="id" id="id">
-                    </td>
+                    <td><input autofocus maxlength="5"  required placeholder="영문만 사용해 주세요" type="text" name="id" id="id"></td>
                 </tr>
                 <tr>
                     <th align="left"><label for="pw">PW</label></th>
-                    <td><input maxlength="12" minlength="8" required placeholder="특문포함 8자 이상" type="password" name="pw"
-                            id="pw"></td>
+                    <td><input maxlength="12" minlength="8" required placeholder="특문포함 8자 이상" type="password" name="pw" id="pw"></td>
                 </tr>
             </table>
             <button type="submit" class="btn"><span>LOGIN</span></button>
@@ -127,18 +89,17 @@
             <table>
                 <tr>
                     <th align="left"><label for="search">배송 마트 주소</label></th>
-                    <td><input type="search" name="search" id="search"><button style="color:#333; margin-left: 10px;"
-                            type="submit">검색</button></td>
+                    <td><input type="search" name="search" id="search"><button style="color:#333; margin-left: 10px;" type="submit">검색</button></td>
                 </tr>
                 <tr>
                     <th align="left">과일 고르기</th>
                     <td>
                         <label for="sb">딸기</label>
-                        <input value="1" type="checkbox" name="sb" id="sb">
+                        <input value="1" type="checkbox" name="sb" id="sb" >
                         <label for="bn">바나나</label>
-                        <input value="2" type="checkbox" name="bn" id="bn">
+                        <input value="2" type="checkbox" name="bn" id="bn" >
                         <label for="wm">수박</label>
-                        <input value="3" type="checkbox" name="wm" id="wm">
+                        <input value="3" type="checkbox" name="wm" id="wm" >
                     </td>
                 </tr>
                 <tr>
@@ -186,8 +147,7 @@
                 <tr>
                     <th align="left"><label for="tel">Telephone</label></th>
                     <td>
-                        <input type="tel" pattern="[0-9]{11}" placeholder="[0-9]까지의 숫자 11자리" required name="tel"
-                            id="tel">
+                        <input type="tel" pattern="[0-9]{11}" placeholder="[0-9]까지의 숫자 11자리" required name="tel" id="tel">
                     </td>
                 </tr>
             </table>
@@ -196,5 +156,4 @@
         </fieldset>
     </form>
 </body>
-
 </html>
