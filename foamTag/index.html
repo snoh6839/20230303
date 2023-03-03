@@ -50,39 +50,28 @@
           -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
           transform: translateX(-9%) translateY(-25%) rotate(45deg);
         }
-        form:first-child {
+        form {
             margin-bottom: 30px;
         }
+        fieldset {border: 3px solid #d278ce;}
+        legend {font-size: 26px;}
     </style>
 </head>
 <body>
     <form>
         <fieldset>
-            <legend>고객 정보</legend>
+            <legend>로그인</legend>
             <table>
                 <tr>
                     <th align="left"><label for="id">ID</label></th>
-                    <td><input maxlength="5"  required placeholder="영문만 사용해 주세요" type="text" name="id" id="id"></td>
+                    <td><input autofocus maxlength="5"  required placeholder="영문만 사용해 주세요" type="text" name="id" id="id"></td>
                 </tr>
                 <tr>
                     <th align="left"><label for="pw">PW</label></th>
-                    <td><input maxlength="12"  required placeholder="특문포함 8자 이상" type="password" name="pw" id="pw"></td>
-                </tr>
-                <tr>
-                    <th align="left"><label for="email">E-mail</label></th>
-                    <td>
-                        <input type="email"  required placeholder="aaa@aaa.com" name="email" id="email">
-                    </td>
-                </tr>
-                <tr>
-                    <th align="left"><label for="tel">Telephone</label></th>
-                    <td>
-                        <input type="tel" pattern="[0-9]{11}" placeholder="[0-9]까지의 숫자 11자리" required name="tel" id="tel">
-                    </td>
+                    <td><input maxlength="12" minlength="8" required placeholder="특문포함 8자 이상" type="password" name="pw" id="pw"></td>
                 </tr>
             </table>
-            <button type="submit" class="btn"><span>제출</span></button>
-            <input style="border: none; background: transparent;" type="reset" value="다시쓰기">
+            <button type="submit" class="btn"><span>LOGIN</span></button>
         </fieldset>
     </form>
     <form>
@@ -115,7 +104,7 @@
                 <tr>
                     <th align="left">배송방식</th>
                     <td>
-                        <label for="sen">선불</label><input type="radio" name="deli" id="sen">
+                        <label for="sen">선불</label><input checked type="radio" name="deli" id="sen">
                         <label for="ar">착불</label><input type="radio" name="deli" id="ar">
                     </td>
                 </tr>
@@ -128,7 +117,30 @@
                 </tr>
             </table>
             <button type="submit" class="btn"><span>제출</span></button>
-            <input style="border: none; background: transparent;" type="reset" value="다시쓰기">
+            <input style="margin-left: 412px; padding-top: 10px; border: none; background: transparent;" type="reset" value="다시쓰기">
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>
+                고객정보
+            </legend>
+            <table>
+                <tr>
+                    <th align="left"><label for="email">E-mail</label></th>
+                    <td>
+                        <input type="email" required placeholder="aaa@aaa.com" name="email" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <th align="left"><label for="tel">Telephone</label></th>
+                    <td>
+                        <input type="tel" pattern="[0-9]{11}" placeholder="[0-9]까지의 숫자 11자리" required name="tel" id="tel">
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" class="btn"><span>제출</span></button>
+            <input style="margin-left: 412px; padding-top: 10px; border: none; background: transparent;" type="reset" value="다시쓰기">
         </fieldset>
     </form>
 </body>
