@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foam tag</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>고객 정보</legend>
+            <table>
+                <tr>
+                    <th><label for="id">ID</label></th>
+                    <td><input maxlength="5"  required placeholder="영문만 사용해 주세요" type="text" name="id" id="id"></td>
+                </tr>
+                <tr>
+                    <th><label for="pw">PW</label></th>
+                    <td><input maxlength="12"  required placeholder="특문포함 8자 이상" type="password" name="pw" id="pw"></td>
+                </tr>
+                <tr>
+                    <th><label for="email">E-mail</label></th>
+                    <td>
+                        <input type="email"  required placeholder="aaa@aaa.com" name="email" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="tel">Telephone</label></th>
+                    <td>
+                        <input type="tel" pattern="[0-9]{11}" placeholder="[0-9]까지의 숫자 11자리" required name="tel" id="tel">
+                    </td>
+                </tr>
+            </table>
+            <button style="margin-left: 220px; margin-top: 10px;" type="submit">제출</button>
+        </fieldset>
+        <fieldset>
+            <legend>배송 정보</legend>
+            <table>
+                <tr>
+                    <th><label for="search">배송 마트 주소</label></th>
+                    <td><input type="search" name="search" id="search"><button style="margin-left: 10px;" type="submit">검색</button></td>
+                </tr>
+                <tr>
+                    <th>과일 고르기</th>
+                    <td>
+                        <label for="sb">딸기</label><input value="1" type="checkbox" name="sb" id="sb" >
+                        <label for="bn">바나나</label><input value="2" type="checkbox" name="bn" id="bn" >
+                        <label for="wm">수박</label><input value="3" type="checkbox" name="wm" id="wm" >
+                    </td>
+                </tr>
+                <tr>
+                    <th>과일 갯수</th>
+                    <td>
+                        <label for="sbNum">딸기</label>
+                        <input type="number" min="0" max="5" id="sbNum">
+                        <label for="bNum">바나나</label>
+                        <input type="number" min="0" max="5" id="bNum">
+                        <label for="wNum">수박</label>
+                        <input type="number" min="0" max="5" id="wNum">
+                    </td>
+                </tr>
+                <tr>
+                    <th>배송방식</th>
+                    <td>
+                        <label for="sen">선불</label><input type="radio" name="deli" id="sen">
+                        <label for="ar">착불</label><input type="radio" name="deli" id="ar">
+                    </td>
+                </tr>
+                <tr>
+                    <th>배송날짜</th>
+                    <td>
+                        <label for="date"></label>
+                        <input type="date" name="date" id="date" min="2023-03-03" max="2023-03-10">
+                    </td>
+                </tr>
+            </table>
+            <button style="margin-left: 300px; margin-top: 10px;" type="submit">제출</button>
+        </fieldset>
+    </form>
+</body>
+</html>
