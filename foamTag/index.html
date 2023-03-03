@@ -9,8 +9,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap');
         * {font-family: 'Sunflower', sans-serif; font-size: 18px; color: aliceblue;}
         body {background-color: #333;}
-        input {color: #333;}
-        input:focus {border: 1px solid aqua; outline: none;}
+        input, textarea , select, option {color: #333;}
+        input:focus, textarea:focus , select:focus, option:focus {border: 1px solid aqua; outline: none;}
         th { padding-right: 15px;}
         .btn {
                 border: none;
@@ -73,11 +73,11 @@
             <table>
                 <tr>
                     <th align="left"><label for="id">ID</label></th>
-                    <td><input autofocus maxlength="5"  required placeholder="영문만 사용해 주세요" type="text" name="id" id="id"></td>
+                    <td><input autofocus maxlength="5"  required placeholder="영문만 사용해 주세요" onfocus="this.placeholder = ''" onblur="this.placeholder = '영문만 사용해 주세요'" type="text" name="id" id="id"></td>
                 </tr>
                 <tr>
                     <th align="left"><label for="pw">PW</label></th>
-                    <td><input maxlength="12" minlength="8" required placeholder="특문포함 8자 이상" type="password" name="pw" id="pw"></td>
+                    <td><input maxlength="12" minlength="8" required placeholder="특문포함 8자 이상" onfocus="this.placeholder = ''" onblur="this.placeholder = '특문포함 8자 이상'" type="password" name="pw" id="pw"></td>
                 </tr>
             </table>
             <button type="submit" class="btn"><span>LOGIN</span></button>
@@ -114,6 +114,17 @@
                     </td>
                 </tr>
                 <tr>
+                    <th align="left"><label for="wrap">포장</label></th>
+                    <td>
+                        <select name="wrap" id="wrap">
+                            <option align="center" value="0" selected disabled>필수선택</option>
+                            <option align="center" value="1">선물용</option>
+                            <option align="center" value="2">가정용</option>
+                            <option align="center" value="3">친환경</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
                     <th align="left">배송방식</th>
                     <td>
                         <label for="sen">선불</label><input checked type="radio" name="deli" id="sen">
@@ -125,6 +136,12 @@
                     <td>
                         <label for="date"></label>
                         <input type="date" name="date" id="date" min="2023-03-03" max="2023-03-10">
+                    </td>
+                </tr>
+                <tr>
+                    <th align="left">배송 요청사항</th>
+                    <td>
+                        <textarea placeholder="배송시 요청사항이 있으시면 입력해 주세요" onfocus="this.placeholder = ''" onblur="this.placeholder = '배송시 요청사항이 있으시면 입력해 주세요'" name="request" id="request" cols="30" rows="3"></textarea>
                     </td>
                 </tr>
             </table>
@@ -154,6 +171,18 @@
             <button type="submit" class="btn"><span>제출</span></button>
             <input class="reWrite" type="reset" value="다시쓰기">
         </fieldset>
+    </form>
+    <form>
+        <form>
+            담당자 : <input type="text" name="deplist" list="depList"><br>
+            <datalist id="depList">
+                <option value="김수진"></option>
+                <option value="이진아"></option>
+                <option value="정상용"></option>
+                <option value="주성후"></option>
+            </datalist>
+            <input class="reWrite" type="submit" value="추천하기">
+        </form>
     </form>
 </body>
 </html>
